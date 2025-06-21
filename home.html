@@ -1,0 +1,300 @@
+<html><head>
+<title>U.N.C.K Incorperated</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    /* Animation */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    body {
+      animation: fadeIn 5s;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding-top: 5px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+      background: linear-gradient(90deg, #2a7b9b 0%, #57c785 50%, #eddd53 100%);
+    }
+
+    .navbar a {
+      color: white;
+      font-weight: bold;
+      padding: 14px 16px;
+      font-size: 20px;
+      text-decoration: none;
+      text-shadow: 1px 1px #333;
+    }
+
+    /* Title Section */
+    .title {
+      background: linear-gradient(90deg, #2a7b9b 0%, #57c785 50%, #eddd53 100%);
+      text-align: center;
+    }
+
+    .title h1 {
+      color: white;
+      font-size: 200px;
+      text-shadow: 2px 2px #333;
+      margin: 0;
+    }
+
+    .title p {
+      color: white;
+      font-size: 50px;
+      text-shadow: 2px 2px #333;
+      transform: translateY(-20px);
+      padding-bottom: 200px;
+      margin: 0;
+    }
+
+    /* What We Do Section */
+    .whatwedo {
+      background-color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .whatwedo h1 {
+      font-size: 50px;
+      color: #333;
+    }
+
+    .whatwedo h2 {
+      font-size: 30px;
+      color: #333;
+    }
+
+    .whatwedo ul {
+      list-style: none;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .whatwedo li {
+      padding: 5px;
+    }
+
+    /* Store Section */
+    .store h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .merch {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      font-weight: bold;
+    }
+
+    .merch-item {
+      text-align: center;
+      width: 200px;
+    }
+
+    .merch-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .merch-item a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    /* About Section */
+    .about {
+      background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+      color: white;
+      text-shadow: 2px 2px #333;
+      padding: 100px;
+      font-weight: bold;
+    }
+
+    .about a {
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+    }
+
+    .about h1 {
+      text-align: center;
+      font-size: 50px;
+    }
+
+    .about p {
+      margin: 20px auto;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: white;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+    
+    /*mobile code*/
+    @media (max-width: 768px) {
+  .navbar a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .title h1 {
+    font-size: 60px;
+  }
+
+  .title p {
+    font-size: 24px;
+    padding-bottom: 100px;
+    transform: translateY(-10px);
+  }
+
+  .whatwedo h1 {
+    font-size: 36px;
+  }
+
+  .whatwedo h2 {
+    font-size: 20px;
+  }
+
+  .whatwedo ul {
+    font-size: 16px;
+  }
+
+  .store h1 {
+    font-size: 36px;
+    padding: 20px 10px;
+  }
+
+  .merch {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .merch-item {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .caption {
+    font-size: 16px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about h1 {
+    font-size: 36px;
+  }
+
+  .about p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a href="standings.html">Standings</a>
+  </div>
+
+  <div class="title">
+    <h1>U.N.C.K</h1>
+    <p>United Notable Cool Kids Incorporated</p>
+  </div>
+
+  <div class="content">
+    <div class="whatwedo">
+      <h1>What We Do</h1>
+      <h2>Officially? Nothing. Unofficially? No one’s sure. Rumors include:</h2>
+      <ul>
+        <li>Running an elite underground ping-pong league</li>
+        <li>Curating the “vibe” of major global trends without ever posting online</li>
+        <li>Once tried to release a cologne called “Confidence” that smelled like a clean notebook and a concert backstage pass</li>
+      </ul>
+    </div>
+
+    <div class="store">
+      <h1>Shop U.N.C.K Inc Merch</h1>
+      <div class="merch">
+        <div class="merch-item">
+          <a href="444.html">
+            <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jy6y16g6ef09sxf8j410qa7t%2F1750432022_img_0.webp?st=2025-06-20T13%3A51%3A01Z&amp;se=2025-06-26T14%3A51%3A01Z&amp;sks=b&amp;skt=2025-06-20T13%3A51%3A01Z&amp;ske=2025-06-26T14%3A51%3A01Z&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&amp;skv=2019-02-02&amp;sv=2018-11-09&amp;sr=b&amp;sp=r&amp;spr=https%2Chttp&amp;sig=ssIMu0yGCumYFQO%2BTEhI0mFDKqyIqezYB8Ip5Sy64yQ%3D&amp;az=oaivgprodscus" alt="C Hat">
+            <div class="caption">C Hat</div>
+          </a>
+        </div>
+        <div class="merch-item">
+          <a href="444.html">
+            <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jy6y48pke7mtda01p2ak8gct%2F1750432159_img_0.webp?st=2025-06-20T13%3A19%3A26Z&amp;se=2025-06-26T14%3A19%3A26Z&amp;sks=b&amp;skt=2025-06-20T13%3A19%3A26Z&amp;ske=2025-06-26T14%3A19%3A26Z&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&amp;skv=2019-02-02&amp;sv=2018-11-09&amp;sr=b&amp;sp=r&amp;spr=https%2Chttp&amp;sig=nmnoRnW5kt259ToUovnqQrH2lRr8lXIdhd7f%2F0s7CDY%3D&amp;az=oaivgprodscus" alt="404: Cool Not Found Sweatshirt">
+            <div class="caption">404: Cool Not Found Sweatshirt</div>
+          </a>
+        </div>
+        <div class="merch-item">
+          <a href="444.html">
+            <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jy6y34t1f219g57ntwjgs37a%2F1750432094_img_0.webp?st=2025-06-20T13%3A19%3A00Z&amp;se=2025-06-26T14%3A19%3A00Z&amp;sks=b&amp;skt=2025-06-20T13%3A19%3A00Z&amp;ske=2025-06-26T14%3A19%3A00Z&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&amp;skv=2019-02-02&amp;sv=2018-11-09&amp;sr=b&amp;sp=r&amp;spr=https%2Chttp&amp;sig=Q84K4YshLp8JVlDBapXdRt63wNdIsyS0toMhHxGnDIk%3D&amp;az=oaivgprodscus" alt="UNCK Inc Sticker">
+            <div class="caption">UNCK Inc Sticker</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about">
+      <a href="about.html">
+        <h1 id="about">About Us</h1>
+        <p>We’re not here to explain ourselves. U.N.C.K. Inc wasn’t built for clarity — it emerged, like static between stations, or a beat you only hear in dreams. Some say it’s a brand. Others say it’s a frequency. We’re not correcting anyone. All we know is that it found us, not the other way around.</p>
+        <p>There’s no manifesto, no timeline, and no pitch deck. Just scattered signals, half-forgotten conversations, and a few too many coincidences. If you’re reading this, chances are you’ve already felt it — the low hum of something you can’t name, but recognize instantly. We don’t do launches. We don't do drops. Things appear when they need to. Or they don’t.</p>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <a href="home.html"><p>Home</p></a>
+    <a href="about.html"><p>About</p></a>
+    <a href="news.html"><p>News</p></a>
+    <p>© 2025 U.N.C.K Inc. All rights reserved.</p>
+  </footer>
+
+</body></html>

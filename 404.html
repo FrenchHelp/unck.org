@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 | U.N.C.K. Inc</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+      color: #ffffff;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+      mix-blend-mode: overlay;
+      z-index: 1;
+    }
+
+    .glitch-container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .glitch {
+      font-size: 5rem;
+      color: white;
+      position: relative;
+      animation: glitch 1s infinite;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .glitch::before {
+      animation: glitchTop 2s infinite linear;
+      color: #00ffe0;
+      z-index: -1;
+    }
+
+    .glitch::after {
+      animation: glitchBottom 1.5s infinite linear;
+      color: #ff0066;
+      z-index: -2;
+    }
+
+    @keyframes glitch {
+      0% {
+        transform: none;
+      }
+      20% {
+        transform: skew(-5deg);
+      }
+      40% {
+        transform: skew(5deg);
+      }
+      60% {
+        transform: translate(-5px, 5px);
+      }
+      80% {
+        transform: translate(5px, -5px);
+      }
+      100% {
+        transform: none;
+      }
+    }
+
+    @keyframes glitchTop {
+      0% {
+        clip-path: inset(0 0 80% 0);
+        transform: translate(-3px, -3px);
+      }
+      50% {
+        clip-path: inset(0 0 50% 0);
+        transform: translate(3px, 3px);
+      }
+      100% {
+        clip-path: inset(0 0 90% 0);
+        transform: translate(-1px, -1px);
+      }
+    }
+
+    @keyframes glitchBottom {
+      0% {
+        clip-path: inset(80% 0 0 0);
+        transform: translate(3px, 3px);
+      }
+      50% {
+        clip-path: inset(30% 0 0 0);
+        transform: translate(-3px, -3px);
+      }
+      100% {
+        clip-path: inset(85% 0 0 0);
+        transform: translate(1px, 1px);
+      }
+    }
+
+    .message {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 20px;
+      text-align: center;
+      opacity: 0.8;
+      animation: fadeIn 4s ease-in-out forwards;
+      z-index: 3;
+      max-width: 80%;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 0.8;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glitch-container">
+    <div>
+      <div class="glitch" data-text="404 - Not Found">404 - Not Found</div>
+      <div class="message">
+        This page never existed.<br>
+        Or maybe it did. Briefly.<br>
+        <br>
+        Either way, you were not supposed to see this.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

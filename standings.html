@@ -1,0 +1,398 @@
+<head>
+  <title> Standings | U.N.C.K Incorperated</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Normal CSS */
+body {
+  animation: fadeIn 5s;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  padding-top: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+  background: linear-gradient(90deg, #2a7b9b 0%, #57c785 50%, #eddd53 100%);
+}
+
+.navbar a {
+  color: white;
+  font-weight: bold;
+  padding: 14px 16px;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 1px 1px #333;
+}
+
+.ranks {
+  margin: 0;
+  padding: 50px;
+}
+
+.ranks h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.ranks h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.ranks p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ranks ul {
+  list-style-type: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ranks li {
+  padding: 10px;
+}
+
+.ranks a {
+  text-decoration: none;
+  color: #333;
+}
+
+.roster-box {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  height: auto;
+  color: grey;
+  font-weight: bold;
+}
+
+.name {
+  margin-bottom: 20px;
+}
+
+.name-rank {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.bar-container {
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.bar {
+  height: 10px;
+  background: linear-gradient(90deg, #2a7b9b, #57c785, #eddd53);
+  width: 0;
+  animation: fillBar 1.2s ease-out forwards;
+}
+
+@keyframes fillBar {
+  to {
+    width: var(--bar-width);
+  }
+}
+
+.rankinfo {
+  margin: 100px;
+  font-weight: bold;
+}
+
+.rankinfo h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.rank {
+  padding-top: 50px;
+}
+
+.board {
+  background: linear-gradient(90deg, #2a7b9b 0%, #57c785 50%, #eddd53 100%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #333;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 25px;
+  font-weight: bold;
+}
+
+.board p {
+  text-shadow: 1px 1px #333;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member {
+  text-align: center;
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  filter: grayscale(100%) contrast(130%);
+  transition: transform 0.3s ease;
+}
+
+.member img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%) contrast(100%);
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer p {
+  color: white;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/*mobile*/
+
+@media (max-width: 768px) {
+  .navbar a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .ranks {
+    padding: 30px 15px;
+  }
+
+  .ranks h1 {
+    font-size: 28px;
+  }
+
+  .ranks h2 {
+    font-size: 22px;
+  }
+
+  .ranks p,
+  .ranks ul {
+    font-size: 16px;
+  }
+
+  .roster-box {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .name-rank {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rankinfo {
+    margin: 30px 15px;
+  }
+
+  .rankinfo h1 {
+    font-size: 24px;
+  }
+
+  .rankinfo p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .board {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .board h1 {
+    font-size: 26px;
+  }
+
+  .board p {
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .member img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .caption {
+    font-size: 0.8rem;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a href="standings.html">Standings</a>
+  </div>
+  <div class="ranks">
+    <h1>Our System</h1>
+    <p>“You don’t choose your rank. The fog places you.”</p>
+    <h2>The U.N.C.K system has five ranks:</h2>
+    <ul>
+      <li><a href="#supreme">Supreme U.N.C.K.</a></li>
+      <li><a href="#uncunck">Unc U.N.C.K.</a></li>
+      <li><a href="#unck">U.N.C.K.</a></li>
+      <li><a href="#unckling">U.N.C.K.-ling</a></li>
+      <li><a href="#unckleast">U.N.C.K.-least</a></li>
+    </ul>
+
+    <div class="roster-box">
+      <div class="name">
+        <div class="name-rank">
+          <span>Boui</span>
+          <span>U.N.C.K.-Least</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" style="--bar-width: 1.5%;"></div>
+        </div>
+      </div>
+
+      <div class="name">
+        <div class="name-rank">
+          <span>Jonny</span>
+          <span>U.N.C.K.-Least</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" style="--bar-width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="name">
+        <div class="name-rank">
+          <span>Liam</span>
+          <span>U.N.C.K.-Least</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" style="--bar-width: .6%;"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="rankinfo">
+    <div class="rank">
+      <h1 id="supreme">Supreme U.N.C.K.</h1>
+      <p>The highest possible status in the U.N.C.K. system — and possibly fictional. Only one Supreme Unck is said to exist at any time. No record of their identity exists, but their choices ripple through the group without ever being spoken. They’re referred to in code, rumored to communicate through corrupted ZIP files, burned CDs, or glitchy voice messages that arrive on empty phones.</p>
+    </div>
+    <div class="rank">
+      <h1 id="uncunck">Unc U.N.C.K.</h1>
+      <p>The Eldest is not necessarily the oldest in age, but the longest in the fog. They’ve seen U.N.C.K. incarnate in different decades, scenes, and formats — from skate zines in ‘98 to encrypted TikToks in 2023. They act as lore-keepers, archive-makers, and the only ones who might know what U.N.C.K. stands for on any given day. Rarely visible, always observing.</p>
+    </div>
+    <div class="rank">
+      <h1 id="unck">U.N.C.K.</h1>
+      <p>The standard, but never average, Unck. These are the field operatives, style shifters, cultural saboteurs. They make things happen and leave before the lights come on. They speak in fragments, carry USB drives full of half-finished ideas, and leave stickers where they shouldn’t. No one becomes an Unck. You just realize you already were.</p>
+    </div>
+    <div class="rank">
+      <h1 id="unckling">U.N.C.K.-ling</h1>
+      <p>These are the aspirants — people drawn to U.N.C.K. without fully understanding why. Unck Lings are invited through oblique gestures: a mixtape handed off in silence, a scribbled phrase on a dollar bill, a website that vanishes after you visit it once. Some Lings rise. Some fade. All are watching, and being watched.</p>
+    </div>
+    <div class="rank">
+      <h1 id="unckleast">U.N.C.K.-least</h1>
+      <p>Often mistaken as outsiders, the Unck Least rank is either the beginning or the end — no one is sure. They know nothing, but that makes them unpredictable. Some say Supreme Uncks start here again when they’ve seen too much. Others say the Least are decoys, distractions, or ghosts. Most of them don’t even know they’re ranked.</p>
+    </div>
+  </div>
+  <div class="board">
+    <h1>Board Of U.N.C.K.s</h1>
+    <p>The Board of U.N.C.K.s is not a council in the traditional sense. There are no meeting rooms, no recorded minutes, and no public decisions. It is a fluctuating consciousness, allegedly composed of five key figures who guide the unseen rhythm of U.N.C.K. Inc. Some refer to them as a steering ghost hand. Others say they're simply the ones who remember what U.N.C.K. once was — or what it will be.</p>
+    <p>The Board doesn’t decide what U.N.C.K. does — they decide what it doesn’t do. They’re the gatekeepers of absence, the custodians of the undefined. Their influence is not in action, but in resistance to it. They are not leaders. They are reflections — warped and shifting — keeping the fog from clearing too much.</p>
+      <div class="container">
+    <div class="member">
+      <img src="https://cdn-icons-png.flaticon.com/512/12225/12225935.png" alt="Supreme Unck">
+      <div class="caption">Supreme U.N.C.K. "Eli"</div>
+    </div>
+    <div class="member">
+      <img src="https://cdn-icons-png.flaticon.com/512/12225/12225935.png" alt="Unc Unck">
+      <div class="caption">Unc U.N.C.K. "Ryan"</div>
+    </div>
+    <div class="member">
+      <img src="https://cdn-icons-png.flaticon.com/512/12225/12225935.png" alt="88hx">
+      <div class="caption">U.N.C.K. "Fausto"</div>
+    </div>
+    <div class="member">
+      <img src="https://cdn-icons-png.flaticon.com/512/12225/12225935.png" alt="Vessel">
+      <div class="caption">U.N.C.K. “Max”</div>
+    </div>
+    <div class="member">
+      <img src="https://cdn-icons-png.flaticon.com/512/12225/12225935.png" alt="Owlboy">
+      <div class="caption">U.N.C.K. “Ethan”</div>
+    </div>
+  </div>
+  </div>
+  <footer>
+    <a href="home.html">
+      <p>Home</p>
+    </a>
+    <a href="about.html">
+      <p>About</p>
+    </a>
+    <a href="news.html">
+      <p>News</p>
+    </a>
+    <p>&copy; 2025 U.N.C.K Inc. All rights reserved.</p>
+  </footer>
+</body>
